@@ -222,3 +222,4 @@ C:\Users\hbrun\Desktop\TesteSoftLine\SoftLineProject\obj\Debug\net10.0\refint\So
 C:\Users\hbrun\Desktop\TesteSoftLine\SoftLineProject\obj\Debug\net10.0\SoftLineProject.pdb
 C:\Users\hbrun\Desktop\TesteSoftLine\SoftLineProject\obj\Debug\net10.0\SoftLineProject.genruntimeconfig.cache
 C:\Users\hbrun\Desktop\TesteSoftLine\SoftLineProject\obj\Debug\net10.0\ref\SoftLineProject.dll
+C:\Users\hbrun\Desktop\TesteSoftLine\SoftLineProject\obj\Debug\net10.0\SoftLineProject.sourcelink.json
