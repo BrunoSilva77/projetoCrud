@@ -1,0 +1,39 @@
+@model IEnumerable<SoftLineProject.Models.Cliente>
+<div class="mb-3">
+    <a asp-controller="Login" asp-action="Menu" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-house-door"></i> Voltar ao Menu Principal
+    </a>
+</div>
+<h2>Lista de Clientes</h2>
+<a asp-action="Create" class="btn btn-success mb-3">Adicionar Novo Cliente</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Documento</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Codigo</td>
+                <td>@item.Nome</td>
+                <td>@item.Documento</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Codigo" class="btn btn-sm btn-info">Visualizar</a>
+                    <a asp-action="Edit" asp-route-id="@item.Codigo" class="btn btn-warning btn-sm">Editar</a>
+                    <form asp-action="Delete" asp-route-id="@item.Codigo" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Tem certeza que deseja apagar?')">
+                            Apagar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

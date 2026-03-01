@@ -1,0 +1,36 @@
+@model SoftLineProject.Models.Produto
+
+@{
+    ViewData["Title"] = "Detalhes do Produto";
+}
+
+<div class="mt-4">
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>
+
+<div class="container mt-4">
+    <h2>Detalhes do Produto</h2>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Código</dt>
+        <dd class="col-sm-9">@Model.Codigo</dd>
+
+        <dt class="col-sm-3">Descrição</dt>
+        <dd class="col-sm-9">@Model.Descricao</dd>
+
+        <dt class="col-sm-3">Cód. Barras</dt>
+        <dd class="col-sm-9">@Model.CodigoBarras</dd>
+
+        <dt class="col-sm-3">Valor de Venda</dt>
+        <dd class="col-sm-9">@Model.ValorVenda.ToString("C2")</dd>
+
+        <dt class="col-sm-3">Peso Bruto</dt>
+        <dd class="col-sm-9">@Model.PesoBruto.ToString("N3") kg</dd>
+
+        <dt class="col-sm-3">Peso Líquido</dt>
+        <dd class="col-sm-9">@Model.PesoLiquido.ToString("N3") kg</dd>
+    </dl>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+    </div>
+</div>

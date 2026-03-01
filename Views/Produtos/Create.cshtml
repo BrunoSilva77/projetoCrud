@@ -1,0 +1,36 @@
+@model SoftLineProject.Models.Produto
+<div class="mt-4">
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>
+<h2>Cadastro de Produto</h2>
+<form asp-action="Create">
+    <div class="row">
+        <div class="col-md-6">
+            <label>Código (Inteiro)</label>
+            <input asp-for="Codigo" class="form-control" type="number" required placeholder="Ex: 150B0LPK" />
+        </div>
+        <div class="col-md-6">
+            <label>Descrição</label>
+            <input asp-for="Descricao" class="form-control" maxlength="100" required
+                   placeholder="Ex: Cachorro com espada (Máx 100)" />
+        </div>
+        <div class="col-md-6">
+            <label>Cód. Barras</label>
+            <input asp-for="CodigoBarras" class="form-control" maxlength="14"
+                   placeholder="Ex: 14657890123451 (Máx 14)" />
+        </div>
+        <div class="col-md-6">
+            <label>Valor de Venda</label>
+            <input asp-for="ValorVenda" class="form-control money" type="text" placeholder="Ex: R$ 10" />
+        </div>
+        <div class="col-md-6">
+            <label>Peso Bruto</label>
+            <input asp-for="PesoBruto" class="form-control weight" type="text" placeholder="Ex: 100kg" />
+        </div>
+        <div class="col-md-6">
+            <label>Peso Líquido</label>
+            <input asp-for="PesoLiquido" class="form-control weight" type="text" placeholder="Ex: 120kg" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Salvar e Voltar</button>
+</form>

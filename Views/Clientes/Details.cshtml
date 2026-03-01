@@ -1,0 +1,33 @@
+@model SoftLineProject.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes do Cliente";
+}
+
+<div class="mt-4">
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>
+
+<div class="container mt-4">
+    <h2>Detalhes do Cliente</h2>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Código</dt>
+        <dd class="col-sm-9">@Model.Codigo</dd>
+
+        <dt class="col-sm-3">Nome</dt>
+        <dd class="col-sm-9">@Model.Nome</dd>
+
+        <dt class="col-sm-3">Fantasia</dt>
+        <dd class="col-sm-9">@Model.Fantasia</dd>
+
+        <dt class="col-sm-3">Documento</dt>
+        <dd class="col-sm-9">@Model.Documento</dd>
+
+        <dt class="col-sm-3">Endereço</dt>
+        <dd class="col-sm-9">@Model.Endereco</dd>
+    </dl>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+    </div>
+</div>
